@@ -40,7 +40,7 @@ const POS = () => {
     return cart.reduce((total, item) => total + (item.pricePerUnit * item.quantity), 0);
   };
 
-  const processSale = () => {
+  const handleSaleProcess = () => {
     if (cart.length === 0) {
       alert('Cart is empty');
       return;
@@ -173,7 +173,7 @@ const POS = () => {
               </div>
 
               <button
-                onClick={processSale}
+                onClick={handleSaleProcess}
                 className="w-full bg-primary hover:bg-primary/80 text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors"
               >
                 <CreditCard size={20} />
